@@ -11,5 +11,5 @@ chmod 600 ~/.netrc
 
 # All commands are in /bin
 # We copy /bin to /urs/local/bin on the container
-sh -c "$*"
+sh -c "git $*"
 
