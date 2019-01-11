@@ -9,6 +9,8 @@ LABEL "com.github.actions.description"="Runs git commands in an Action"
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="blue"
 
+RUN apt-get install -y git
+
 COPY README.md /
 ENV PATH="/usr/local/bin:${PATH}"
 COPY bin /usr/local/bin
