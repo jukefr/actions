@@ -1,12 +1,11 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Git for GitHub Actions"]
+  resolves = [
+    "Debug",
+  ]
 }
 
-action "Git for GitHub Actions" {
-  uses = "./git"
-  args = "status"
-  secrets = ["GITHUB_TOKEN", "USER"]
+action "Debug" {
+  uses = "actions/bin/sh@master"
+  args = "pwd && ls -l"
 }
-
-
