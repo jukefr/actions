@@ -5,7 +5,7 @@ set -e
 
 # Create ~/.netrc to skip Github login
 echo "machine github.com" > ~/.netrc
-echo "login $GITHUB_USER" > ~/.netrc
+echo "login $USER" > ~/.netrc
 echo "password $GITHUB_TOKEN" > ~/.netrc
 
 # All commands are in /bin
