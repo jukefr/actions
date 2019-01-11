@@ -12,8 +12,6 @@ LABEL "com.github.actions.color"="blue"
 RUN apt-get update && apt-get install -y git
 
 COPY README.md /
-ENV PATH="/usr/local/bin:${PATH}"
-COPY bin /usr/local/bin
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
