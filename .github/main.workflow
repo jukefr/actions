@@ -1,11 +1,15 @@
 workflow "New workflow" {
   on = "push"
-  resolves = [
-    "Debug",
-  ]
+  resolves = ["actions/bin/sh@master"]
 }
 
 action "Debug" {
   uses = "actions/bin/sh@master"
-  args = "pwd && ls -l"
+  args = "pwd"
+}
+
+action "actions/bin/sh@master" {
+  uses = "actions/bin/sh@master"
+  needs = ["Debug"]
+  args = ["ls -l"]
 }
