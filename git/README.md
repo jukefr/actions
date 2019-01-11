@@ -1,4 +1,4 @@
-# Git (only compatible with Github for now)
+# Git
 
 ## Usage
 
@@ -11,5 +11,5 @@ action "Push" {
 }
 ```
 
-You need to make `GITHUB_TOKEN` available to the Action.
-You need to create a secret/env variable `USER` to store the git username and make it available to the Action.
+You need to make a `GIT_TOKEN` and make it available to the Action.
+You need to make a `GIT_USER` and make it available to the Action.

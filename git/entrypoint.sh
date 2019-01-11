@@ -5,8 +5,8 @@ set -e
 
 # Create ~/.netrc to skip Github login
 echo "machine github.com" > ~/.netrc
-echo "login $USER" >> ~/.netrc
-echo "password $GITHUB_TOKEN" >> ~/.netrc
+echo "login $GIT_USER" >> ~/.netrc
+echo "password $GIT_TOKEN" >> ~/.netrc
 chmod 600 ~/.netrc
 
 # Configure Git
